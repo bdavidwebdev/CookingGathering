@@ -1,0 +1,24 @@
+<div class="header">
+  <div *ngFor="let x of UNIQUE_ITEM" class="top_item">
+    <a (click)="onSelectType(x.item)"
+      ><img src="{{ x.img }}" style="width: 32px" />{{ x.item }}</a
+    >
+  </div>
+</div>
+
+<div class="table-css">
+  <table class="table">
+    <thead>
+      <th>Type</th>
+      <th>Item</th>
+      <th>Location</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of DYN_TABLE">
+        <td>{{ x.type }}</td>
+        <td><img src="{{ x.img }}" style="width: 32px" />{{ x.item }}</td>
+        <td>{{ x.location }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
