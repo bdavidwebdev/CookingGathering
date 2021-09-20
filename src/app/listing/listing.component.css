@@ -1,41 +1,53 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  .top_1 {
-    background-color: #8800b9;
-    color: #02041a;
-    padding: 20px;
-    float: left;
-    width: 25%; /* The width is 20%, by default */
-    height: 110px;
-  }
-  
-  .top_2 {
-    background-color: #02041a;
-    color: #8800b9;
-    padding: 20px;
-    float: left;
-    width: 25%; /* The width is 60%, by default */
-    height: 110px;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.logo {
+  display: grid;
+  place-items: center;
+  padding: 16px 0;
+}
+.logo img {
+  max-height: 80px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-color: #02041a;
+  padding: 20px;
+  font-weight: 600;
+}
+.top_item {
+  background-color: #02041a;
+  color: #8800b9;
+  padding: 10px;
+  float: left;
+  width: 12.5%; /* The width is 60%, by default */
+  height: 60px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.table-css {
+  padding: 20px;
+  background-color: #02041a;
+}
+.table {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #02041a;
+  color: white;
+}
+tbody {
+  margin-top: 20px;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 250px) {
+  .top_1,
+  .top_2,
   .top_item {
-    background-color: #02041a;
-    color: #8800b9;
-    padding: 10px;
-    float: left;
-    width: 12.5%; /* The width is 60%, by default */
-    height: 60px;
-    cursor: pointer;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
-  
-  .table{
-      table-layout: fixed;
-      width: 100%;
-  }
-  /* Use a media query to add a break point at 800px: */
-  @media screen and (max-width: 250px) {
-    .top_1, .top_2, .top_item {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    }
 }

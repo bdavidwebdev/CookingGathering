@@ -1,42 +1,36 @@
-<!-- <div class="top_1">
-  <h4>Type</h4>
-<select (change)="onSelectType($event.target.value)">
-    <option>Select</option>
-    <option *ngFor='let x of UNIQUE_TYPE'>{{ x }}</option>
-  </select>
+<div class="logo">
+  <a href="https://nazarick-community.fr"
+    ><img src="../../assets/logo_naz.png" alt=""
+  /></a>
 </div>
-<div class="top_2">
-<h4>Item</h4>
-<select (change)="onSelectType($event.target.value)">
-    <option>Select</option>
-    <option *ngFor='let x of UNIQUE_ITEM'>{{ x }}</option>
-  </select>
+
+<div class="header">
+  <div *ngFor="let x of UNIQUE_ITEM" class="top_item">
+    <a (click)="onSelectType(x.item)"
+      ><img src="{{ x.img }}" style="width: 32px; padding-right: 6px" />{{
+        x.item
+      }}</a
+    >
+  </div>
 </div>
-<div class="top_1">
-<h4>Location</h4>
-<select (change)="onSelectType($event.target.value)">
-    <option>Select</option>
-    <option *ngFor='let x of UNIQUE_LOCATION'>{{ x }}</option>
-  </select>
-</div>
-<div class="top_2">
-<h4>Rechercher</h4>
-<input (input)="onSelectType($event.target.value)" placeholder="Item">
-</div> -->
-<div *ngFor='let x of UNIQUE_ITEM' class="top_item">
-  <a (click)="onSelectType(x.item)"><img src={{x.img}} style="width: 32px;" />{{x.item}}</a>
-</div>
+
+<div class="table-css">
   <table class="table">
-      <thead> 
-          <th>Type</th>
-          <th>Item</th>
-          <th>Location</th>
-      </thead>
-      <tbody>
-      <tr *ngFor='let x of DYN_TABLE'>
-          <td>{{x.type}}</td>
-          <td><img src={{x.img}} style="width: 32px;" />{{x.item}}</td>
-          <td>{{x.location}}</td>
+    <thead>
+      <th>Type</th>
+      <th>Item</th>
+      <th>Location</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of DYN_TABLE">
+        <td>{{ x.type }}</td>
+        <td>
+          <img src="{{ x.img }}" style="width: 32px; padding-right: 6px" />{{
+            x.item
+          }}
+        </td>
+        <td>{{ x.location }}</td>
       </tr>
     </tbody>
   </table>
+</div>
