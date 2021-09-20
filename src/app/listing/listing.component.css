@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .top_1 {
+    background-color: #8800b9;
+    color: #02041a;
+    padding: 20px;
+    float: left;
+    width: 25%; /* The width is 20%, by default */
+    height: 110px;
+  }
+  
+  .top_2 {
+    background-color: #02041a;
+    color: #8800b9;
+    padding: 20px;
+    float: left;
+    width: 25%; /* The width is 60%, by default */
+    height: 110px;
+  }
+  .top_item {
+    background-color: #02041a;
+    color: #8800b9;
+    padding: 10px;
+    float: left;
+    width: 12.5%; /* The width is 60%, by default */
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  .table{
+      table-layout: fixed;
+      width: 100%;
+  }
+  /* Use a media query to add a break point at 800px: */
+  @media screen and (max-width: 250px) {
+    .top_1, .top_2, .top_item {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
