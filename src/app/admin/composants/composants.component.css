@@ -1,0 +1,11 @@
+
+.table-css {
+  padding: 20px;
+  background-color: #02041a;
+}
+.table {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #02041a;
+  color: white;
+}

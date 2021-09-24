@@ -1,0 +1,28 @@
+.top_item {
+  background-color: #02041a;
+  color: #8800b9;
+  padding: 5px;
+  float: left;
+  width: 33%; /* The width is 60%, by default */
+  height: 60px;
+  cursor: pointer;
+}
+.table-css {
+  padding: 20px;
+  background-color: #02041a;
+}
+.table {
+  margin: 0 auto;
+  width: auto;
+  background-color: #02041a;
+  color: white;
+}
+.colored{
+  color: #8800b9;
+}
+input{
+  color: #8800b9;
+}
+.leBouton{
+  text-align: center;
+}

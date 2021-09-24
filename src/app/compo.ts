@@ -4,4 +4,5 @@ export interface Compo {
     item: string,
     location: string,
     img: string
+
 }

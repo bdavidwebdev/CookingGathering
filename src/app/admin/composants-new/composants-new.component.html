@@ -1,0 +1,64 @@
+<div>
+  <form [formGroup]="compoForm" (ngSubmit)="createCompo()">
+    <div>
+      <h4 class="colored">Création d'une composant</h4>
+    </div>
+    <table class="table table-css">
+      <thead>
+        <th>Attributs</th>
+        <th>Localisation du composants</th>
+      </thead>
+      <tbody>
+      <tr >
+        <td>
+          <div class="">
+          <label>Nom du composant</label><br>
+          <input formControlName="item" type="text">
+          </div>
+        </td>
+        <td rowspan=4>
+          <div *ngFor="let loc of locations">
+              <td><input type="checkbox" [value]="loc" (change)="onLocationChange($event)"> {{loc}}</td>
+          </div>
+        </td>
+        <td rowspan=4>
+          <label>MAP</label><br>
+          <img src="{{ mapLink}}" style="width: auto; padding-left: 15px" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="">
+              <label>Lien de l'image</label><br>
+              <input formControlName="image" type="text" (change)="onLoadImage($event)">
+              <img src="{{ imageLink }}" style="width: 64px; padding-left: 15px" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="">
+              <label>Type du composants</label><br>
+              <div *ngFor="let type of types">
+                  <td><input type="checkbox" [value]="type" (change)="onTypeChange($event)"> {{type}}</td>
+              </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="">
+              <label>Upload de la map</label><br>
+              <input type="file" (change)="uploadMap($event)" accept=".png" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan=3 class="leBouton">
+          <button class="btn btn-primary" type="submit" [disabled]="!compoForm.valid">Envoyer</button>
+        </td>
+      </tr>
+    </tbody>
+        </table>
+      </form>
+    </div>

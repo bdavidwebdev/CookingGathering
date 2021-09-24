@@ -1,0 +1,26 @@
+
+<div class="table-css">
+  <button type="button" class="btn btn-primary" routerLink="/admin/comp/new">Créer un composant</button>
+    <table class="table">
+      <thead>
+        <th>Type</th>
+        <th>Item</th>
+        <th>Location</th>
+        <th scope="2">Action</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of composants">
+          <td>{{ x.type }}</td>
+          <td>
+            <img src="{{ x.image }}" style="width: 32px; padding-right: 6px" />{{
+              x.item
+            }}
+          </td>
+          <td>{{ x.location }}</td>
+          <td><button type="button" class="btn btn-primary" [routerLink]="['/admin/comp/edit/', x.id]">Edit ({{ x.id }})</button></td>
+          <td><button type="button" class="btn btn-primary" (click) = "deleteCompo(x.id)">Suppr</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
