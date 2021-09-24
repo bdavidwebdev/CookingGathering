@@ -14,25 +14,29 @@
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
   background-color: #02041a;
   padding: 20px;
   font-weight: 600;
 }
 
-.top_text{
+.top_text {
   color: #8800b9;
   text-align: center;
 }
-.top_item {
-  background-color: #02041a;
+.type-item {
+  display: grid;
+  place-items: center;
+}
+.link {
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border: 1px solid #8800b9;
+  border-radius: 30px;
   color: #8800b9;
-  padding: 10px;
-  float: left;
-  width: 12.5%; /* The width is 60%, by default */
-  height: 60px;
   cursor: pointer;
-  font-size: 20px;
+  margin: 2px;
 }
 .table-css {
   padding: 20px;
@@ -40,14 +44,19 @@
 }
 .table {
   table-layout: fixed;
-  width: 75%;
+  width: 100%;
   background-color: #02041a;
   color: white;
 }
 tbody {
   margin-top: 20px;
 }
-
+th {
+  font-size: 26px;
+}
+td {
+  font-size: 20px;
+}
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 250px) {
   .top_item {
